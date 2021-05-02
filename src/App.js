@@ -8,6 +8,7 @@ import SearchBar from './components/searchBar';
 function App() {
  const [news, setNews] = useState([])
  const [searchQuery, setSearchQuery] = useState('react')
+ const [isLoading, setLoading] = useState(true)
 
   useEffect(() => {
     async function fetchNews() {
@@ -15,8 +16,14 @@ function App() {
            axios.get(`http://hn.algolia.com/api/v1/search?query=${searchQuery}&tags=story`)
           .then((response) =>{ 
             const data = response.data.hits ;
-            setNews(data);
-            console.log(data)
+
+            if(data.length === 0) {
+              setLoading(false);
+              alert('no match found');
+            } else
+
+            {setNews(data);
+            setLoading(false)}
           });
   } catch(error) {
       console.log("error", error);
@@ -24,20 +31,40 @@ function App() {
     }
     fetchNews();
 
+   // setInterval(fetchNews, 4000);
+
   },[searchQuery])
 
-  function handleSearch() {
-    setSearchQuery(input.value)
-    console.log('hello')
+  function handleSearch(inputValue) {
+    setSearchQuery(inputValue)
+    
   }
 
   return (
     <div className="App">
+<header>
+  <h1>Hacker News!!!</h1>
+  </header>
+      <div className="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+    </div>
 
-      <h1>I'm alive!!!</h1>
-      <SearchBar search= {handleSearchS} />
-      <NewsList news={news} /> 
       
+      <SearchBar search= {handleSearch} />
+      <NewsList 
+      isLoading={isLoading}
+      news={news} /> 
+      
+  <footer>
+  <h1>Read The Latest Gist !!!</h1>
+  </footer>
 
     </div>
 

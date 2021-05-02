@@ -1,7 +1,9 @@
+
 .App {
   text-align: center;
+  background-color: rgb(214, 212, 214);
 }
-
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -14,7 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #551d30;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +37,40 @@
   to {
     transform: rotate(360deg);
   }
+}*/
+.pagination {
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 30px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #6c7f92;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+header {
+  background-color:#6c7f92;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+footer {
+  background-color:#6c7f92;
+  padding: 8px;
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  margin-top: 60px;
 }

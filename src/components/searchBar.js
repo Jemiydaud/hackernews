@@ -1,23 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './news.css';
 
-const Searchbar = ({keyword,setKeyword,search}) => {
-  const BarStyling = {width:"20rem", height:"2rem", background:"#F2F1F9", border:"none", padding:"0.5rem"};
+export default function Searchbar ( {search} ) {
+
+  const [inputValue, setInputValue] = useState('')
+
+  function handleInputValue({target}){
+    setInputValue(target.value);
+  
+  }
+ 
 
   return (
       <div>
-    <input 
-     type='search'
-     style={BarStyling}
-     key="random1"
-     value={keyword}
-     placeholder={"Search keyword"}
-     //onChange={(e) => setKeyword(e.target.value)}
+    <input type='search' value={inputValue} placeholder={"Search keyword"} onChange={handleInputValue}
     />
-    <button onClick = {search}>Search</button>
+    <button onClick = {() => search(inputValue)}>
+      Search</button>
     </div>
   );
 }
 
 
-export default Searchbar

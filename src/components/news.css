@@ -1,7 +1,7 @@
 button {
     display: inline-block;
   padding: 15px 25px;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -14,6 +14,28 @@ button {
   margin-left: 10px;
 }
 
-input{
-    border-radius: 15px;  
+button:hover {background-color: #583169}
+
+button:active {
+  background-color: #9aa77b;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input {
+    height: 3rem ;
+    width: 30%;
+    margin: 10px;
+    padding: 12px 20px;
+   
+    border: 2px solid rgb(121, 97, 52);
+    border-radius: 15px;
+    background-color:whitesmoke;
+    font-size: 18px;
+  
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 50px;
 }
