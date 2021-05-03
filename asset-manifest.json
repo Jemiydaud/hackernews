@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hackernews/static/css/main.5397ddbe.chunk.css",
+    "main.js": "/hackernews/static/js/main.e7e3b041.chunk.js",
+    "main.js.map": "/hackernews/static/js/main.e7e3b041.chunk.js.map",
+    "runtime-main.js": "/hackernews/static/js/runtime-main.1c901d8d.js",
+    "runtime-main.js.map": "/hackernews/static/js/runtime-main.1c901d8d.js.map",
+    "static/js/2.f0360ed2.chunk.js": "/hackernews/static/js/2.f0360ed2.chunk.js",
+    "static/js/2.f0360ed2.chunk.js.map": "/hackernews/static/js/2.f0360ed2.chunk.js.map",
+    "static/js/3.b8b0a915.chunk.js": "/hackernews/static/js/3.b8b0a915.chunk.js",
+    "static/js/3.b8b0a915.chunk.js.map": "/hackernews/static/js/3.b8b0a915.chunk.js.map",
+    "index.html": "/hackernews/index.html",
+    "static/css/main.5397ddbe.chunk.css.map": "/hackernews/static/css/main.5397ddbe.chunk.css.map",
+    "static/js/2.f0360ed2.chunk.js.LICENSE.txt": "/hackernews/static/js/2.f0360ed2.chunk.js.LICENSE.txt",
+    "static/media/BeanEater.a9f85f3c.gif": "/hackernews/static/media/BeanEater.a9f85f3c.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1c901d8d.js",
+    "static/js/2.f0360ed2.chunk.js",
+    "static/css/main.5397ddbe.chunk.css",
+    "static/js/main.e7e3b041.chunk.js"
+  ]
+}
