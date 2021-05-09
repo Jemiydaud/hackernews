@@ -8,8 +8,7 @@ import SearchBar from './components/searchBar';
 function App() {
  const [news, setNews] = useState([])
  const [searchQuery, setSearchQuery] = useState('react')
- const [isLoading, setLoading] = useState(true)
-
+ const [isLoading,setIsLoading] = useState()
   useEffect(() => {
     async function fetchNews() {
       try {
@@ -18,12 +17,12 @@ function App() {
             const data = response.data.hits ;
 
             if(data.length === 0) {
-              setLoading(false);
+              setIsLoading(false);
               alert('no match found');
             } else
 
             {setNews(data);
-            setLoading(false)}
+            setIsLoading(false)}
           });
   } catch(error) {
       console.log("error", error);
